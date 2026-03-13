@@ -12,17 +12,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>PrevTech SST</title>
-
 <link rel="stylesheet" href="style.css">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
-
 <body>
-
 <div class="phone">
 
 <header>
@@ -176,6 +171,124 @@ PrevTech SST
 
 </div>
 
+<!-- Gestao de Incidentes-->
+
+<div class="screen" id="incidente">
+
+<h2>Gestão de Incidentes e CAT</h2>
+
+<div class="form-group">
+<label class="form-label">Funcionário envolvido</label>
+<input type="text" placeholder="Nome do trabalhador">
+</div>
+
+<div class="form-group">
+<label class="form-label">Setor</label>
+<input type="text" placeholder="Ex: Produção">
+</div>
+
+<div class="form-group">
+<label class="form-label">Data do incidente</label>
+<input type="date">
+</div>
+
+<div class="incident-section">
+
+<h3>Tipo de ocorrência</h3>
+
+<div class="incident-options">
+
+<label class="incident-card">
+<input type="radio" name="tipo">
+<span>Acidente com afastamento</span>
+</label>
+
+<label class="incident-card">
+<input type="radio" name="tipo">
+<span>Acidente sem afastamento</span>
+</label>
+
+<label class="incident-card">
+<input type="radio" name="tipo">
+<span>Quase acidente</span>
+</label>
+
+</div>
+
+</div>
+
+<div class="form-group">
+<label class="form-label">Descrição do ocorrido</label>
+<textarea rows="3" placeholder="Descreva o que aconteceu"></textarea>
+</div>
+
+<div class="form-group">
+<label class="form-label">Possíveis causas</label>
+<textarea rows="2" placeholder="Ex: Falta de EPI, piso escorregadio"></textarea>
+</div>
+
+<div class="form-group">
+<label class="form-label">Ações preventivas</label>
+<textarea rows="2" placeholder="Medidas para evitar novos acidentes"></textarea>
+</div>
+
+<button>Registrar Incidente / Gerar CAT</button>
+
+</div>
+
+<!-- Gestao de Incidentes-->
+
+<!-- Normas Regulamentadoras (NRs)-->
+
+<div class="screen" id="nrs">
+
+<h2>Normas Regulamentadoras</h2>
+
+<div class="form-group">
+<label class="form-label">Pesquisar NR</label>
+<input type="text" placeholder="Ex: NR 6, NR 10, NR 35">
+</div>
+
+<div class="nr-section">
+
+<h3>Normas mais consultadas</h3>
+
+<div class="nr-list">
+
+<div class="nr-card">
+<h4>NR 6</h4>
+<p>Equipamentos de Proteção Individual (EPI)</p>
+</div>
+
+<div class="nr-card">
+<h4>NR 10</h4>
+<p>Segurança em Instalações Elétricas</p>
+</div>
+
+<div class="nr-card">
+<h4>NR 12</h4>
+<p>Segurança no Trabalho em Máquinas</p>
+</div>
+
+<div class="nr-card">
+<h4>NR 18</h4>
+<p>Segurança na Construção Civil</p>
+</div>
+
+<div class="nr-card">
+<h4>NR 35</h4>
+<p>Trabalho em Altura</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Normas Regulamentadoras (NRs)-->
+
+
 <div class="bottom-menu">
 
 <button onclick="mostrarTela('checklist')">
@@ -188,20 +301,26 @@ Checklist
 EPI
 </button>
 
+<button onclick="mostrarTela('incidente')">
+<i class="fa-solid fa-triangle-exclamation"></i>
+Incidente
+</button>
+
+<button onclick="mostrarTela('nrs')">
+<i class="fa-solid fa-book"></i>
+NRs
+</button>
+
 </div>
 
 </div>
 
 <script>
-
 function mostrarTela(id){
-
 document.querySelectorAll(".screen").forEach(t=>{
 t.classList.remove("active")
 })
-
 document.getElementById(id).classList.add("active")
-
 }
 
 </script>
