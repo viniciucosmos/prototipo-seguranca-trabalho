@@ -23,7 +23,7 @@ overflow:hidden;
 
 header{
 
-background:#2e7d32;
+background:#5ebe62;
 color:white;
 padding:18px;
 text-align:center;
@@ -383,4 +383,9 @@ margin:4px 0 0 0;
 font-size:13px;
 color:#555;
 
+}
+
+.logo{
+height:40px;
+width:auto;
 }
