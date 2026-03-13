@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Segurança</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PrevTech SST</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="phone">
+
+<header>
+<i class="fa-solid fa-shield-halved"></i>
+PrevTech SST
+</header>
+
+<div class="content">
+
+<!-- CHECKLIST -->
+
+<div class="screen active" id="checklist">
+
+<h2>Checklist de Inspeção</h2>
+
+<div class="form-group">
+<label class="form-label">Local da Inspeção</label>
+<input type="text" placeholder="Ex: Área de Produção">
+</div>
+
+<div class="form-group">
+<label class="form-label">Data</label>
+<input type="date">
+</div>
+
+<div class="checklist-item">
+
+<h3>Uso correto de EPI</h3>
+
+<div class="check-options">
+<label>
+<input type="radio" name="epi">
+<span>Conforme</span>
+</label>
+
+<label>
+<input type="radio" name="epi">
+<span>Não Conforme</span>
+</label>
+</div>
+
+</div>
+
+<div class="checklist-item">
+
+<h3>Sinalização de Segurança</h3>
+
+<div class="check-options">
+<label>
+<input type="radio" name="sinal">
+<span>Conforme</span>
+</label>
+
+<label>
+<input type="radio" name="sinal">
+<span>Não Conforme</span>
+</label>
+</div>
+
+</div>
+
+<div class="checklist-item">
+
+<h3>Condição das Máquinas</h3>
+
+<div class="check-options">
+<label>
+<input type="radio" name="maq">
+<span>Conforme</span>
+</label>
+
+<label>
+<input type="radio" name="maq">
+<span>Não Conforme</span>
+</label>
+</div>
+
+</div>
+
+<div class="form-group">
+<label class="form-label">Observações</label>
+<textarea rows="3"></textarea>
+</div>
+
+<button>Salvar Inspeção</button>
+
+</div>
+
+<!-- CONTROLE EPI -->
+
+<div class="screen" id="epi">
+
+<h2>Controle de EPI</h2>
+
+<div class="form-group">
+<label class="form-label">Funcionário</label>
+<input type="text" placeholder="Nome do trabalhador">
+</div>
+
+<div class="form-group">
+<label class="form-label">Setor</label>
+<input type="text" placeholder="Ex: Manutenção">
+</div>
+
+<div class="epi-section">
+
+<h3>EPIs Entregues</h3>
+
+<div class="epi-grid">
+
+<label class="epi-card">
+<input type="checkbox">
+<span>Capacete</span>
+</label>
+
+<label class="epi-card">
+<input type="checkbox">
+<span>Luvas</span>
+</label>
+
+<label class="epi-card">
+<input type="checkbox">
+<span>Óculos de proteção</span>
+</label>
+
+<label class="epi-card">
+<input type="checkbox">
+<span>Protetor auricular</span>
+</label>
+
+<label class="epi-card">
+<input type="checkbox">
+<span>Botina de segurança</span>
+</label>
+
+</div>
+
+</div>
+
+<div class="form-group">
+<label class="form-label">Data de Entrega</label>
+<input type="date">
+</div>
+
+<div class="form-group">
+<label class="form-label">Próxima Troca</label>
+<input type="date">
+</div>
+
+<button>Registrar EPI</button>
+
+</div>
+
+<div class="bottom-menu">
+
+<button onclick="mostrarTela('checklist')">
+<i class="fa-solid fa-list-check"></i>
+Checklist
+</button>
+
+<button onclick="mostrarTela('epi')">
+<i class="fa-solid fa-helmet-safety"></i>
+EPI
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function mostrarTela(id){
+
+document.querySelectorAll(".screen").forEach(t=>{
+t.classList.remove("active")
+})
+
+document.getElementById(id).classList.add("active")
+
+}
+
+</script>
+
+</body>
+</html>
+</body>
+</html>
